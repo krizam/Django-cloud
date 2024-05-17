@@ -1,18 +1,79 @@
-.page-header {
-  margin-top: 30px;
+/* Container for the to-do list */
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Individual to-do item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+/* Style for the text of the to-do item */
+.todo-text {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for completed to-do items */
+.todo-complete .todo-text {
+  color: #aaa;
+}
+
+/* Checkbox for marking to-do items as complete */
+.todo-status-checkbox {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Delete icon */
 .fa-trash-alt {
   color: red;
   float: right;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
-.todo-complete {
-  text-decoration: line-through;
+.fa-trash-alt:hover {
+  color: darkred;
 }
 
-.todo-status-checkbox {
+/* Page header */
+.page-header {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Button to add new to-do items */
+.add-todo-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.add-todo-button:hover {
+  background-color: #218838;
 }
